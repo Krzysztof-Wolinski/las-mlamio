@@ -1,22 +1,21 @@
-// import './style.css';
+import './style.css';
 const images = {
   treasure: '💰',
   leafs: '🍃'
-}
+};
 
-const elements = document.querySelectorAll(".tree");
+const elements = document.querySelectorAll('.tree');
 
 // console.log(elements);
 
 elements.forEach((element, index) => {
-  element.addEventListener("mouseover", (e)=>{
-    if (element.classList.value.includes("treasure")) {
-      console.log("Wygrałeś");
+  element.addEventListener('mouseover', e => {
+    if (element.classList.value.includes('treasure')) {
+      console.log('Wygrałeś');
       element.innerText = images.treasure;
-      alert("Wygrałeś");
+      alert('Wygrałeś');
     } else {
       element.innerText = images.leafs;
     }
-  })
-})
-
+  });
+});

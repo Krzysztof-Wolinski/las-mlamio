@@ -6,16 +6,13 @@ const images = {
 
 const elements = document.querySelectorAll('.tree');
 
-// console.log(elements);
-
-elements.forEach((element, index) => {
+elements.forEach(element => {
   element.addEventListener('mouseover', e => {
     if (element.classList.value.includes('treasure')) {
-      console.log('Wygrałeś');
-      element.innerText = images.treasure;
+      element.innerHTML = images.treasure;
       alert('Wygrałeś');
     } else {
-      element.innerText = images.leafs;
+      element.innerHTML = images.leafs;
     }
   });
 });
